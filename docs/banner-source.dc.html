@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;background:#0a1013;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  a{color:#4bd0b0;text-decoration:none;}
+  a:hover{color:#7fe0c8;}
+</style>
+</helmet>
+<div style="width:1600px;height:920px;position:relative;overflow:hidden;background:radial-gradient(1100px 640px at 82% 8%,#16303a,transparent 60%),radial-gradient(900px 560px at 6% 96%,#123334,transparent 62%),linear-gradient(150deg,#0c1519,#0a1013 60%,#0b1417);font-family:'Hanken Grotesk',system-ui,sans-serif;">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,rgba(44,111,168,.16),transparent 55%);"></div>
+
+  <div style="position:relative;padding:58px 72px 0;display:flex;align-items:center;justify-content:space-between;gap:32px;">
+    <div style="display:flex;align-items:center;gap:22px;">
+      <div style="position:relative;width:88px;height:88px;border-radius:23%;background:linear-gradient(135deg,#2E8F87,#2C6FA8);box-shadow:0 4px 13px rgba(8,30,42,.45),inset 0 1px 0 rgba(255,255,255,.28);overflow:hidden;flex-shrink:0;"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.20),transparent 55%);"></div><svg viewBox="0 0 100 100" width="100%" height="100%" style="position:relative;display:block;"><circle cx="50" cy="50" r="27" fill="none" stroke="rgba(255,255,255,.34)" stroke-width="5"></circle><circle cx="50" cy="50" r="27" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-dasharray="127 170" transform="rotate(-90 50 50)"></circle><circle cx="50" cy="50" r="7.5" fill="#ffffff"></circle></svg></div>
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:52px;font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1;">ScaleConnect</div>
+        <div style="font-size:19px;color:#9fb4bd;font-weight:500;margin-top:12px;letter-spacing:.005em;">Body-composition tracking for your Bluetooth scale.</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;flex-shrink:0;">
+      <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#d7e4ea;padding:9px 15px;border-radius:999px;font-size:15px;font-weight:600;"><span style="width:7px;height:7px;border-radius:50%;background:#4bd0b0;"></span>Bluetooth sync</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#d7e4ea;padding:9px 15px;border-radius:999px;font-size:15px;font-weight:600;"><span style="width:7px;height:7px;border-radius:50%;background:#4bd0b0;"></span>6 metrics</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#d7e4ea;padding:9px 15px;border-radius:999px;font-size:15px;font-weight:600;"><span style="width:7px;height:7px;border-radius:50%;background:#4bd0b0;"></span>Light &amp; dark</span>
+    </div>
+  </div>
+
+  <div style="position:relative;display:flex;justify-content:center;align-items:flex-start;gap:52px;margin-top:34px;">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:18px;transform:translateY(22px);">
+  <div style="width:284px;height:615px;flex-shrink:0;filter:drop-shadow(0 34px 46px rgba(4,18,26,.5));">
+    <div style="width:412px;height:892px;transform:scale(0.69);transform-origin:top left;">
+      <x-import component-from-global-scope="AndroidDevice" from="./android-frame.jsx" bg="#eef3f5" hint-size="412px,892px"><div style="--bg:#eef3f5;--surface:#ffffff;--surface2:#e9eef1;--text:#141c20;--muted:#5d6b72;--faint:#95a1a7;--line:#e3e9ec;--good:#2f8f77;--good-soft:#e3f1eb;--shadow:0 1px 2px rgba(20,45,55,.05),0 12px 26px rgba(20,45,55,.06);--shadow-sm:0 1px 2px rgba(20,45,55,.1);--m-fat:oklch(0.60 0.09 250);--m-hyd:oklch(0.62 0.09 205);--m-mus:oklch(0.57 0.09 160);--m-bone:oklch(0.55 0.07 278);--m-bmr:oklch(0.60 0.09 182);min-height:100%;background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;padding:16px 16px 22px;display:flex;flex-direction:column;gap:15px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="display:flex;align-items:center;gap:8px;background:var(--good-soft);color:var(--good);padding:7px 13px 7px 11px;border-radius:999px;font-size:13px;font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px color-mix(in oklab,var(--good) 24%,transparent);"></span>Connected<span style="color:var(--muted);font-weight:500;">· Scale S3</span></div>
+                <div style="width:40px;height:40px;border-radius:50%;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--accent,#2C7DA0);box-shadow:var(--shadow);">A</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px 0 2px;">
+                <div style="font-size:11.5px;letter-spacing:.16em;color:var(--faint);font-weight:700;text-transform:uppercase;">Today · 7:32 AM</div>
+                <div style="display:flex;align-items:flex-start;gap:6px;margin-top:8px;font-family:'Bricolage Grotesque',sans-serif;">
+                  <span style="font-size:78px;line-height:.86;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;">178.4</span>
+                  <span style="font-size:20px;font-weight:600;color:var(--muted);margin-top:9px;font-family:'Hanken Grotesk',sans-serif;">lb</span>
+                </div>
+                <sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><div style="display:inline-flex;align-items:center;gap:5px;background:var(--good-soft);color:var(--good);padding:5px 12px;border-radius:999px;font-size:13px;font-weight:600;margin-top:14px;">▼ 0.6 lb<span style="color:var(--muted);font-weight:500;">toward goal · since Sun</span></div></sc-if>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px;">
+                <div style="font-size:15px;font-weight:700;white-space:nowrap;">Body composition</div>
+                <div style="font-size:12px;color:var(--faint);font-weight:600;white-space:nowrap;">5 metrics</div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <div style="background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:14px;display:flex;align-items:center;gap:11px;">
+                  <div style="position:relative;width:46px;height:46px;flex-shrink:0;">
+                    <svg width="46" height="46" viewBox="0 0 36 36" style="transform:rotate(-90deg);display:block;"><circle cx="18" cy="18" r="15.9155" fill="none" stroke="color-mix(in oklab,var(--m-fat) 20%,var(--surface2))" stroke-width="3.2"></circle><circle cx="18" cy="18" r="15.9155" fill="none" stroke="var(--m-fat)" stroke-width="3.2" stroke-linecap="round" pathLength="100" stroke-dasharray="21.3 100"></circle></svg>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">21<span style="font-size:9px;margin:-1px 0 0 1px;color:var(--muted);">%</span></div>
+                  </div>
+                  <div style="min-width:0;"><div style="font-size:12.5px;color:var(--muted);font-weight:600;white-space:nowrap;">Body Fat</div><div style="font-size:19px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1;margin-top:2px;">21.3<span style="font-size:11px;color:var(--faint);font-weight:700;margin-left:1px;">%</span></div><sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><div style="font-size:11px;color:var(--muted);font-weight:600;margin-top:4px;">▼ 0.4</div></sc-if></div>
+                </div>
+                <div style="background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:14px;display:flex;align-items:center;gap:11px;">
+                  <div style="position:relative;width:46px;height:46px;flex-shrink:0;">
+                    <svg width="46" height="46" viewBox="0 0 36 36" style="transform:rotate(-90deg);display:block;"><circle cx="18" cy="18" r="15.9155" fill="none" stroke="color-mix(in oklab,var(--m-hyd) 20%,var(--surface2))" stroke-width="3.2"></circle><circle cx="18" cy="18" r="15.9155" fill="none" stroke="var(--m-hyd)" stroke-width="3.2" stroke-linecap="round" pathLength="100" stroke-dasharray="55.2 100"></circle></svg>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">55<span style="font-size:9px;margin:-1px 0 0 1px;color:var(--muted);">%</span></div>
+                  </div>
+                  <div style="min-width:0;"><div style="font-size:12.5px;color:var(--muted);font-weight:600;">Hydration</div><div style="font-size:19px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1;margin-top:2px;">55.2<span style="font-size:11px;color:var(--faint);font-weight:700;margin-left:1px;">%</span></div><sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><div style="font-size:11px;color:var(--muted);font-weight:600;margin-top:4px;">▲ 0.3</div></sc-if></div>
+                </div>
+                <div style="background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:14px;display:flex;align-items:center;gap:11px;">
+                  <div style="position:relative;width:46px;height:46px;flex-shrink:0;">
+                    <svg width="46" height="46" viewBox="0 0 36 36" style="transform:rotate(-90deg);display:block;"><circle cx="18" cy="18" r="15.9155" fill="none" stroke="color-mix(in oklab,var(--m-mus) 20%,var(--surface2))" stroke-width="3.2"></circle><circle cx="18" cy="18" r="15.9155" fill="none" stroke="var(--m-mus)" stroke-width="3.2" stroke-linecap="round" pathLength="100" stroke-dasharray="42.8 100"></circle></svg>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">43<span style="font-size:9px;margin:-1px 0 0 1px;color:var(--muted);">%</span></div>
+                  </div>
+                  <div style="min-width:0;"><div style="font-size:12.5px;color:var(--muted);font-weight:600;">Muscle</div><div style="font-size:19px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1;margin-top:2px;">42.8<span style="font-size:11px;color:var(--faint);font-weight:700;margin-left:1px;">%</span></div><sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><div style="font-size:11px;color:var(--muted);font-weight:600;margin-top:4px;">▲ 0.2</div></sc-if></div>
+                </div>
+                <div style="background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:14px;display:flex;align-items:center;gap:11px;">
+                  <div style="position:relative;width:46px;height:46px;flex-shrink:0;">
+                    <svg width="46" height="46" viewBox="0 0 36 36" style="transform:rotate(-90deg);display:block;"><circle cx="18" cy="18" r="15.9155" fill="none" stroke="color-mix(in oklab,var(--m-bone) 20%,var(--surface2))" stroke-width="3.2"></circle><circle cx="18" cy="18" r="15.9155" fill="none" stroke="var(--m-bone)" stroke-width="3.2" stroke-linecap="round" pathLength="100" stroke-dasharray="3.4 100"></circle></svg>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;">3.4<span style="font-size:9px;margin:-1px 0 0 1px;color:var(--muted);">%</span></div>
+                  </div>
+                  <div style="min-width:0;"><div style="font-size:12.5px;color:var(--muted);font-weight:600;">Bone</div><div style="font-size:19px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1;margin-top:2px;">3.4<span style="font-size:11px;color:var(--faint);font-weight:700;margin-left:1px;">%</span></div><sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><div style="font-size:11px;color:var(--faint);font-weight:600;margin-top:4px;">— steady</div></sc-if></div>
+                </div>
+              </div>
+              <div style="background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:15px 18px;display:flex;align-items:center;justify-content:space-between;">
+                <div style="min-width:0;"><div style="font-size:14px;color:var(--text);font-weight:700;white-space:nowrap;">Basal metabolism</div><div style="font-size:12px;color:var(--faint);margin-top:3px;white-space:nowrap;">Calories at rest · BMR</div></div>
+                <div style="text-align:right;"><div style="font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--m-bmr);line-height:1;">1,720</div><div style="font-size:10.5px;color:var(--faint);font-weight:700;letter-spacing:.08em;margin-top:4px;">KCAL / DAY</div></div>
+              </div>
+              <div style="position:sticky;bottom:0;z-index:5;margin:auto -16px -22px;padding:9px 10px 11px;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -8px 24px color-mix(in oklab,var(--text) 7%,transparent);display:flex;justify-content:space-around;"><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--accent,#2C7DA0);"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="3" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="12" y="3" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="3" y="12" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="12" y="12" width="7" height="7" rx="2" fill="currentColor"></rect></svg><span style="font-size:11px;font-weight:700;letter-spacing:.01em;">Dashboard</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--muted);"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="12" width="3.4" height="7" rx="1.2" fill="currentColor"></rect><rect x="9.3" y="8" width="3.4" height="11" rx="1.2" fill="currentColor"></rect><rect x="15.6" y="4" width="3.4" height="15" rx="1.2" fill="currentColor"></rect></svg><span style="font-size:11px;font-weight:600;letter-spacing:.01em;">History</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--muted);"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="7" r="3.4" fill="currentColor"></circle><path d="M4.5 18.5c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><span style="font-size:11px;font-weight:600;letter-spacing:.01em;">Profile</span></div></div>
+            </div></x-import>
+    </div>
+  </div>
+  <span style="font-size:15px;font-weight:700;letter-spacing:.02em;color:#a9bcc4;">Dashboard</span>
+</div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:18px;transform:translateY(0px);">
+  <div style="width:284px;height:615px;flex-shrink:0;filter:drop-shadow(0 34px 46px rgba(4,18,26,.5));">
+    <div style="width:412px;height:892px;transform:scale(0.69);transform-origin:top left;">
+      <x-import component-from-global-scope="AndroidDevice" from="./android-frame.jsx" bg="#eef3f5" hint-size="412px,892px"><div style="--bg:#eef3f5;--surface:#ffffff;--surface2:#e9eef1;--text:#141c20;--muted:#5d6b72;--faint:#95a1a7;--line:#e3e9ec;--good:#2f8f77;--good-soft:#e3f1eb;--shadow:0 1px 2px rgba(20,45,55,.05),0 12px 26px rgba(20,45,55,.06);--shadow-sm:0 1px 2px rgba(20,45,55,.1);min-height:100%;background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;padding:16px 16px 22px;display:flex;flex-direction:column;gap:15px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.01em;">History</h3>
+                <div style="display:flex;background:var(--surface2);border-radius:10px;padding:3px;gap:2px;"><div style="min-width:40px;text-align:center;padding:6px 0;border-radius:7px;font-size:12.5px;font-weight:700;color:var(--text);background:var(--surface);box-shadow:var(--shadow-sm);">lb</div><div style="min-width:40px;text-align:center;padding:6px 0;border-radius:7px;font-size:12.5px;font-weight:600;color:var(--muted);">kg</div></div>
+              </div>
+              <div style="background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:16px 16px 14px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <div style="display:flex;align-items:center;gap:7px;"><span style="font-size:15px;font-weight:700;">Weight</span><span style="font-size:11px;color:var(--muted);">▾</span></div>
+                  <sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><span style="display:inline-flex;align-items:center;gap:5px;background:var(--good-soft);color:var(--good);border-radius:999px;padding:4px 11px;font-size:12px;font-weight:600;">▼ 3.4 lb<span style="color:var(--muted);font-weight:500;">this month</span></span></sc-if>
+                </div>
+                <div style="display:flex;background:var(--surface2);border-radius:12px;padding:3px;gap:2px;margin-top:13px;">
+                  <div style="flex:1;text-align:center;padding:7px 0;border-radius:9px;font-size:12.5px;font-weight:600;color:var(--muted);">W</div>
+                  <div style="flex:1;text-align:center;padding:7px 0;border-radius:9px;font-size:12.5px;font-weight:700;color:var(--text);background:var(--surface);box-shadow:var(--shadow-sm);">1M</div>
+                  <div style="flex:1;text-align:center;padding:7px 0;border-radius:9px;font-size:12.5px;font-weight:600;color:var(--muted);">3M</div>
+                  <div style="flex:1;text-align:center;padding:7px 0;border-radius:9px;font-size:12.5px;font-weight:600;color:var(--muted);">1Y</div>
+                  <div style="flex:1;text-align:center;padding:7px 0;border-radius:9px;font-size:12.5px;font-weight:600;color:var(--muted);">All</div>
+                </div>
+                <div style="position:relative;margin-top:16px;">
+                  <div style="position:absolute;top:-4px;right:0;background:var(--text);color:var(--bg);font-size:11px;font-weight:700;padding:3px 8px;border-radius:7px;font-variant-numeric:tabular-nums;">178.4 lb</div>
+                  <svg viewBox="0 0 336 150" width="100%" style="display:block;overflow:visible;">
+                    <defs><linearGradient id="cfL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--accent,#2C7DA0);stop-opacity:.20"></stop><stop offset="1" style="stop-color:var(--accent,#2C7DA0);stop-opacity:0"></stop></linearGradient></defs>
+                    <line x1="16" x2="320" y1="38" y2="38" stroke="var(--line)" stroke-width="1"></line>
+                    <line x1="16" x2="320" y1="82" y2="82" stroke="var(--line)" stroke-width="1"></line>
+                    <line x1="16" x2="320" y1="126" y2="126" stroke="var(--line)" stroke-width="1"></line>
+                    <path d="M16,43 L43.6,55 L71.3,61 L98.9,72 L126.5,67 L154.2,82 L181.8,80 L209.5,90 L237.1,98 L264.7,94 L292.4,104 L320,109 L320,142 L16,142 Z" fill="url(#cfL)"></path>
+                    <path d="M16,43 L43.6,55 L71.3,61 L98.9,72 L126.5,67 L154.2,82 L181.8,80 L209.5,90 L237.1,98 L264.7,94 L292.4,104 L320,109" fill="none" stroke="var(--accent,#2C7DA0)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></path>
+                    <circle cx="320" cy="109" r="4.5" fill="var(--surface)" stroke="var(--accent,#2C7DA0)" stroke-width="2.5"></circle>
+                  </svg>
+                  <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--faint);font-weight:600;"><span>Jun 22</span><span>Jul 6</span><span>Jul 20</span></div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px;">
+                <span style="font-size:15px;font-weight:700;white-space:nowrap;">Weigh-ins</span>
+                <span style="font-size:12.5px;color:var(--faint);font-weight:600;white-space:nowrap;">This month</span>
+              </div>
+              <div style="background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden;">
+                <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+                  <div style="width:60px;flex-shrink:0;"><div style="font-size:12px;color:var(--muted);font-weight:600;">Sun</div><div style="font-size:14px;color:var(--text);font-weight:700;">Jul 20</div></div>
+                  <div style="flex:1;min-width:0;"><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em;">178.4</span><span style="font-size:12px;color:var(--faint);font-weight:600;">lb</span><sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><span style="font-size:12px;color:var(--muted);font-weight:600;margin-left:2px;">▼ 0.6</span></sc-if></div><div style="font-size:12px;color:var(--muted);margin-top:3px;">Fat 21.3% · Muscle 42.8% · Water 55.2%</div></div>
+                  <span style="font-size:19px;color:var(--faint);">›</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-top:1px solid var(--line);">
+                  <div style="width:60px;flex-shrink:0;"><div style="font-size:12px;color:var(--muted);font-weight:600;">Thu</div><div style="font-size:14px;color:var(--text);font-weight:700;">Jul 17</div></div>
+                  <div style="flex:1;min-width:0;"><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em;">179.0</span><span style="font-size:12px;color:var(--faint);font-weight:600;">lb</span><sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><span style="font-size:12px;color:var(--muted);font-weight:600;margin-left:2px;">▼ 0.8</span></sc-if></div><div style="font-size:12px;color:var(--muted);margin-top:3px;">Fat 21.6% · Muscle 42.6% · Water 55.0%</div></div>
+                  <span style="font-size:19px;color:var(--faint);">›</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-top:1px solid var(--line);">
+                  <div style="width:60px;flex-shrink:0;"><div style="font-size:12px;color:var(--muted);font-weight:600;">Mon</div><div style="font-size:14px;color:var(--text);font-weight:700;">Jul 14</div></div>
+                  <div style="flex:1;min-width:0;"><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em;">179.8</span><span style="font-size:12px;color:var(--faint);font-weight:600;">lb</span><sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><span style="font-size:12px;color:var(--faint);font-weight:600;margin-left:2px;">▲ 0.2</span></sc-if></div><div style="font-size:12px;color:var(--muted);margin-top:3px;">Fat 21.9% · Muscle 42.5% · Water 54.7%</div></div>
+                  <span style="font-size:19px;color:var(--faint);">›</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-top:1px solid var(--line);">
+                  <div style="width:60px;flex-shrink:0;"><div style="font-size:12px;color:var(--muted);font-weight:600;">Fri</div><div style="font-size:14px;color:var(--text);font-weight:700;">Jul 11</div></div>
+                  <div style="flex:1;min-width:0;"><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em;">179.6</span><span style="font-size:12px;color:var(--faint);font-weight:600;">lb</span><sc-if value="{{ showDeltas }}" hint-placeholder-val="{{ true }}"><span style="font-size:12px;color:var(--muted);font-weight:600;margin-left:2px;">▼ 1.1</span></sc-if></div><div style="font-size:12px;color:var(--muted);margin-top:3px;">Fat 22.1% · Muscle 42.3% · Water 54.5%</div></div>
+                  <span style="font-size:19px;color:var(--faint);">›</span>
+                </div>
+              </div>
+              <div style="position:sticky;bottom:0;z-index:5;margin:auto -16px -22px;padding:9px 10px 11px;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -8px 24px color-mix(in oklab,var(--text) 7%,transparent);display:flex;justify-content:space-around;"><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--muted);"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="3" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="12" y="3" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="3" y="12" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="12" y="12" width="7" height="7" rx="2" fill="currentColor"></rect></svg><span style="font-size:11px;font-weight:600;letter-spacing:.01em;">Dashboard</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--accent,#2C7DA0);"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="12" width="3.4" height="7" rx="1.2" fill="currentColor"></rect><rect x="9.3" y="8" width="3.4" height="11" rx="1.2" fill="currentColor"></rect><rect x="15.6" y="4" width="3.4" height="15" rx="1.2" fill="currentColor"></rect></svg><span style="font-size:11px;font-weight:700;letter-spacing:.01em;">History</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--muted);"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="7" r="3.4" fill="currentColor"></circle><path d="M4.5 18.5c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><span style="font-size:11px;font-weight:600;letter-spacing:.01em;">Profile</span></div></div>
+            </div></x-import>
+    </div>
+  </div>
+  <span style="font-size:15px;font-weight:700;letter-spacing:.02em;color:#a9bcc4;">History</span>
+</div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:18px;transform:translateY(22px);">
+  <div style="width:284px;height:615px;flex-shrink:0;filter:drop-shadow(0 34px 46px rgba(4,18,26,.5));">
+    <div style="width:412px;height:892px;transform:scale(0.69);transform-origin:top left;">
+      <x-import component-from-global-scope="AndroidDevice" from="./android-frame.jsx" bg="#eef3f5" hint-size="412px,892px"><div style="--bg:#eef3f5;--surface:#ffffff;--surface2:#e9eef1;--text:#141c20;--muted:#5d6b72;--faint:#95a1a7;--line:#e3e9ec;--good:#2f8f77;--good-soft:#e3f1eb;--shadow:0 1px 2px rgba(20,45,55,.05),0 12px 26px rgba(20,45,55,.06);--shadow-sm:0 1px 2px rgba(20,45,55,.1);min-height:100%;background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;padding:16px 16px 22px;display:flex;flex-direction:column;gap:16px;">
+              <div style="display:flex;align-items:center;gap:14px;padding:2px 0;">
+                <div style="width:54px;height:54px;border-radius:50%;background:color-mix(in oklab,var(--accent,#2C7DA0) 15%,var(--surface));border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:21px;color:var(--accent,#2C7DA0);">A</div>
+                <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-size:21px;font-weight:700;line-height:1;">Alex Rivera</div><div style="font-size:13px;color:var(--muted);font-weight:600;margin-top:5px;white-space:nowrap;">Slot 1 · 5′10″ · 34 yrs</div></div>
+              </div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin:0 4px 9px;">Scale user slot</div>
+                <div style="display:flex;gap:10px;">
+                  <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 4px;border-radius:16px;background:color-mix(in oklab,var(--accent,#2C7DA0) 11%,var(--surface));border:1.5px solid var(--accent,#2C7DA0);"><div style="width:38px;height:38px;border-radius:50%;background:var(--accent,#2C7DA0);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">A</div><span style="font-size:12px;font-weight:700;">Alex</span></div>
+                  <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 4px;border-radius:16px;background:var(--surface);border:1.5px solid var(--line);"><div style="width:38px;height:38px;border-radius:50%;background:var(--surface2);color:var(--faint);display:flex;align-items:center;justify-content:center;font-weight:700;">2</div><span style="font-size:12px;font-weight:600;color:var(--muted);">User 2</span></div>
+                  <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 4px;border-radius:16px;background:var(--surface);border:1.5px solid var(--line);"><div style="width:38px;height:38px;border-radius:50%;background:var(--surface2);color:var(--faint);display:flex;align-items:center;justify-content:center;font-weight:700;">3</div><span style="font-size:12px;font-weight:600;color:var(--muted);">User 3</span></div>
+                  <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 4px;border-radius:16px;background:var(--surface);border:1.5px solid var(--line);"><div style="width:38px;height:38px;border-radius:50%;background:var(--surface2);color:var(--faint);display:flex;align-items:center;justify-content:center;font-weight:700;">4</div><span style="font-size:12px;font-weight:600;color:var(--muted);">User 4</span></div>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin:0 4px 9px;">About you</div>
+                <div style="background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 16px;"><span style="font-size:15px;font-weight:500;">Age</span><span style="display:flex;align-items:center;gap:10px;font-size:15px;color:var(--muted);font-weight:600;white-space:nowrap;">34 yrs<span style="font-size:19px;color:var(--faint);font-weight:400;">›</span></span></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 16px;border-top:1px solid var(--line);"><span style="font-size:15px;font-weight:500;">Height</span><span style="display:flex;align-items:center;gap:10px;font-size:15px;color:var(--muted);font-weight:600;white-space:nowrap;">5′ 10″ · 178 cm<span style="font-size:19px;color:var(--faint);font-weight:400;">›</span></span></div>
+                  <div style="padding:14px 16px;border-top:1px solid var(--line);">
+                    <div style="font-size:15px;font-weight:500;margin-bottom:11px;">Sex</div>
+                    <div style="display:flex;background:var(--surface2);border-radius:12px;padding:3px;gap:2px;"><div style="flex:1;text-align:center;padding:8px 0;border-radius:9px;font-size:13px;font-weight:700;color:var(--text);background:var(--surface);box-shadow:var(--shadow-sm);">Male</div><div style="flex:1;text-align:center;padding:8px 0;border-radius:9px;font-size:13px;font-weight:600;color:var(--muted);">Female</div><div style="flex:1;text-align:center;padding:8px 0;border-radius:9px;font-size:13px;font-weight:600;color:var(--muted);">Other</div></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin:0 4px 9px;">Units &amp; goal</div>
+                <div style="background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;"><span style="font-size:15px;font-weight:500;white-space:nowrap;">Weight units</span><div style="display:flex;background:var(--surface2);border-radius:10px;padding:3px;gap:2px;"><div style="min-width:44px;text-align:center;padding:6px 0;border-radius:7px;font-size:13px;font-weight:700;color:var(--text);background:var(--surface);box-shadow:var(--shadow-sm);">lb</div><div style="min-width:44px;text-align:center;padding:6px 0;border-radius:7px;font-size:13px;font-weight:600;color:var(--muted);">kg</div></div></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 16px;border-top:1px solid var(--line);"><span style="font-size:15px;font-weight:500;">Goal weight</span><span style="display:flex;align-items:center;gap:10px;font-size:15px;color:var(--muted);font-weight:600;white-space:nowrap;">172 lb<span style="font-size:19px;color:var(--faint);font-weight:400;">›</span></span></div>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin:0 4px 9px;">Connected device</div>
+                <div style="background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;padding:15px 16px;">
+                  <div style="width:42px;height:42px;border-radius:12px;background:var(--good-soft);display:flex;align-items:center;justify-content:center;"><span style="width:9px;height:9px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px color-mix(in oklab,var(--good) 24%,transparent);"></span></div>
+                  <div style="flex:1;"><div style="font-size:15px;font-weight:700;">Scale S3</div><div style="font-size:12.5px;color:var(--muted);margin-top:2px;">Connected · Battery 82%</div></div>
+                  <span style="font-size:13px;font-weight:700;color:var(--accent,#2C7DA0);">Manage</span>
+                </div>
+              </div>
+              <div style="position:sticky;bottom:0;z-index:5;margin:auto -16px -22px;padding:9px 10px 11px;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -8px 24px color-mix(in oklab,var(--text) 7%,transparent);display:flex;justify-content:space-around;"><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--muted);"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="3" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="12" y="3" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="3" y="12" width="7" height="7" rx="2" fill="currentColor"></rect><rect x="12" y="12" width="7" height="7" rx="2" fill="currentColor"></rect></svg><span style="font-size:11px;font-weight:600;letter-spacing:.01em;">Dashboard</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--muted);"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="12" width="3.4" height="7" rx="1.2" fill="currentColor"></rect><rect x="9.3" y="8" width="3.4" height="11" rx="1.2" fill="currentColor"></rect><rect x="15.6" y="4" width="3.4" height="15" rx="1.2" fill="currentColor"></rect></svg><span style="font-size:11px;font-weight:600;letter-spacing:.01em;">History</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--accent,#2C7DA0);"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="7" r="3.4" fill="currentColor"></circle><path d="M4.5 18.5c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><span style="font-size:11px;font-weight:700;letter-spacing:.01em;">Profile</span></div></div>
+            </div></x-import>
+    </div>
+  </div>
+  <span style="font-size:15px;font-weight:700;letter-spacing:.02em;color:#a9bcc4;">Profile</span>
+</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

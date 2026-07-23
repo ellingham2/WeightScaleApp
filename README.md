@@ -1,5 +1,7 @@
 # ScaleConnect
 
+![ScaleConnect](docs/banner.png)
+
 A custom Android app for Bluetooth body-composition scales that use the
 Senssun BLE protocol — built from scratch after the official "Senssun Body
 Monitor" Play Store app turned out to be unreliable.
