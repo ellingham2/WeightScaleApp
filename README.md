@@ -54,7 +54,7 @@ protocol correctly, with a UI and features the original never had.
 
 ## Installing on your phone
 
-![ScaleConnect](docs/banner.png)
+<img src="docs/banner.png" width="1600" height="920" alt="ScaleConnect" />
 
 ### Option A — install the pre-built APK (no computer needed after download)
 
