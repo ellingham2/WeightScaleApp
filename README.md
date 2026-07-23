@@ -1,7 +1,5 @@
 # ScaleConnect
 
-![ScaleConnect](docs/banner.png)
-
 A custom Android app for Bluetooth body-composition scales that use the
 Senssun BLE protocol — built from scratch after the official "Senssun Body
 Monitor" Play Store app turned out to be unreliable.
@@ -52,6 +50,8 @@ protocol correctly, with a UI and features the original never had.
 
 - Android 8.0 (API 26) or newer
 - A Senssun-protocol BLE body-composition scale
+
+![ScaleConnect](docs/banner.png)
 
 ## Installing on your phone
 
