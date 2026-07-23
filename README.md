@@ -51,9 +51,10 @@ protocol correctly, with a UI and features the original never had.
 - Android 8.0 (API 26) or newer
 - A Senssun-protocol BLE body-composition scale
 
-![ScaleConnect](docs/banner.png)
 
 ## Installing on your phone
+
+![ScaleConnect](docs/banner.png)
 
 ### Option A — install the pre-built APK (no computer needed after download)
 
