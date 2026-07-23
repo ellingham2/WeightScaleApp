@@ -1,0 +1,20 @@
+# Reverse-engineering artifacts (not our code - excluded from the public repo)
+/decompiled/
+/apk/
+/capture/
+
+# Build outputs
+build/
+.gradle/
+.kotlin/
+
+# Local machine config
+local.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# Claude Code project settings (local only)
+.claude/
