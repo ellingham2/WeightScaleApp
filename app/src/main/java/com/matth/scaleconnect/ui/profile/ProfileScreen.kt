@@ -1,5 +1,7 @@
 package com.matth.scaleconnect.ui.profile
 
+import android.content.Intent
+import android.provider.Settings
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -29,6 +31,7 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -36,9 +39,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.app.NotificationManagerCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import com.matth.scaleconnect.ble.ConnectionState
 import com.matth.scaleconnect.data.HeightUnit
 import com.matth.scaleconnect.data.MAX_PROFILE_SLOTS
@@ -78,6 +86,24 @@ fun ProfileScreen(
     var editingGoal by remember { mutableStateOf(false) }
     var showAddDialog by remember { mutableStateOf(false) }
     var confirmRemoveSlot by remember { mutableStateOf<ProfileSlot?>(null) }
+
+    // Android requires a foreground service to show a notification while it runs -
+    // we can't silence it from in-app code, only reflect the OS-level setting and
+    // deep-link to it. Re-check on resume since that's a system Settings screen.
+    val context = LocalContext.current
+    val lifecycleOwner = LocalLifecycleOwner.current
+    var notificationsEnabled by remember {
+        mutableStateOf(NotificationManagerCompat.from(context).areNotificationsEnabled())
+    }
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                notificationsEnabled = NotificationManagerCompat.from(context).areNotificationsEnabled()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
 
     fun formatHeight(cm: Int): String = when (heightUnit) {
         HeightUnit.CM -> "$cm cm"
@@ -357,6 +383,38 @@ fun ProfileScreen(
                         )
                     }
                     Switch(checked = backgroundEnabled, onCheckedChange = onSetBackgroundEnabled)
+                }
+                HorizontalDivider(color = MaterialTheme.colorScheme.outline)
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable {
+                            context.startActivity(
+                                Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+                                    .putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
+                            )
+                        }
+                        .padding(horizontal = 16.dp, vertical = 15.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text("Notifications", fontSize = 15.sp, fontWeight = FontWeight.Medium)
+                        Text(
+                            "Controls the \"Watching for scale…\" notification. Android requires one while background auto-connect is active - turn it off in system settings and the connection keeps working silently.",
+                            fontSize = 12.sp,
+                            color = extended.muted,
+                        )
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(start = 10.dp)) {
+                        Text(
+                            if (notificationsEnabled) "On" else "Off",
+                            color = if (notificationsEnabled) extended.good else extended.faint,
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 13.sp,
+                        )
+                        Text("›", fontSize = 19.sp, color = extended.faint, modifier = Modifier.padding(start = 6.dp))
+                    }
                 }
             }
         }
